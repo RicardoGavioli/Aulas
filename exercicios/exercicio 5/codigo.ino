@@ -1,0 +1,22 @@
+const int led = 5;
+const int botao = 11;
+ 
+int estadoBotao = 0;
+ 
+void setup() 
+{
+  pinMode(led,OUTPUT);   
+  pinMode(botao,INPUT); 
+}        
+   
+void loop() 
+{ 
+  estadoBotao = digitalRead(botao);          
+  if (estadoBotao == HIGH) {
+  digitalWrite(led, LOW);
+  }
+  else {
+  digitalWrite(led, HIGH);
+  }
+    
+}    
